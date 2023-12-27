@@ -1,0 +1,197 @@
+/* /* ## Layout
+
+The designs were created to the following widths:
+
+- Mobile: 375px
+- Desktop: 1440px */
+/* //Declaring Global */
+:root{
+    /* Light mode colors */
+    --background: hsl(0, 0%, 100%)
+    --pale-blue: hsl(225, 100%, 98%);
+    --cards-bg:  hsl(227, 47%, 96%);
+    --font-color: hsl(228, 12%, 44%);
+    --blue-font: hsl(230, 17%, 14%);
+
+    /* Dark Mode colors */
+
+    --dark-bg: hsl(230, 17%, 14%);
+    --top-bg: hsl(232, 19%, 15%);
+    --cards-bg-dark: hsl(228, 28%, 20%);
+    --font-color-dark: hsl(228, 34%, 66%);
+    --white: hsl(0, 0%, 100%);
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: inter;
+    font-weight: 600;
+}
+img{
+    display: block;
+}
+
+
+/* Header Part */
+header, section{
+    padding: 1rem;
+}
+header{
+    font-size: 14PX;
+}
+header h2{
+    font-size: 13px;
+    color: var(--font-color);
+    border-bottom: 1px solid;
+    padding-bottom: 1rem;
+}
+h3{
+    padding: 1rem 0;
+    color: var(--font-color);
+}
+.h3-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+/* //Creating a toggle button// */
+.toggle-container{
+    background-color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+label{
+    background-color: var(--cards-bg);
+    width: 40px;
+    height: 20px;
+    border-radius: 200px;
+    cursor: pointer;
+    position: relative;
+    transition: all 5ms;
+    outline:  none;
+}
+label::before{
+    content: "";
+    background-color: #fff;
+    width: 20px;
+    height: 20px;
+    border-radius: 20px;
+    position: absolute;
+    box-shadow: 0 8px 10px rgba(0, 0, 0, 0.3)
+}
+input:checked + .button{
+    background-color: #fff;
+}
+input:checked + .button::before{
+    transform: translateX(100%);
+    transition: all 5ms;
+}
+.toggle{
+    display: none;
+}
+
+
+/* Card elements layout and coloring */
+.container{
+    display: flex;
+    flex-flow: column;
+    text-align: center;
+    background-color: var(--cards-bg);
+    margin-bottom:1rem;
+    padding: 1rem;
+}
+.container p:first-child{
+    color: var(--font-color);
+    font-size: small;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}
+.container p:first-child img{
+    width: 15px;
+}
+
+.container p:nth-child(2){
+    font-size: 50px;
+    margin-top: 0.5rem;
+}
+.container p:nth-child(3){
+    font-weight: 400;
+    font-size: 12px;
+    color: var(--font-color);
+    letter-spacing: 6px;
+    margin-bottom: 1rem;
+}
+.container:not(:last-child) p:last-child{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    font-size: 10px;
+    color:rgb(34, 189, 34);
+}
+/* .red{
+    color: rgb(195, 26, 26);
+    font-size: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+} */
+
+/* //Overview Part Start //*/
+
+.overview h1{
+    color: var(--font-color);
+}
+
+/* .overview-container{
+    display: flex;
+    align-items: s;
+    justify-content: space-around;
+    background-color: var(--cards-bg);
+    margin-bottom: 1rem;
+} */
+/* .overview-container div p:nth-child(1){
+    margin-bottom: 1rem;
+}
+.overview-container div p:last-child{
+    margin-top: 1rem;
+}
+.green{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    font-size: 10px;
+    color:rgb(34, 189, 34);
+} */.overview {
+  /* Assuming this section has display:flex for the following CSS to work */
+}
+
+.overview-container {
+  display: flex;
+  justify-content: space-between; /* Creates space between elements */
+}
+
+.overview-container > div:first-child,
+.overview-container > div:last-child {
+  flex-basis: calc(50% - 20px); /* Adjust the width for the first and last div */
+}
+
+.overview-container > div:not(:first-child):not(:last-child) {
+  flex-basis: calc(25% - 10px); /* Adjust the width for the middle divs */
+}
+
+.overview-container div {
+  display: flex;
+  align-items: center;
+  gap: 10px; /* Adjust the gap between elements */
+}
+
+.overview-container div p {
+  margin: 0; /* Reset margin */
+}

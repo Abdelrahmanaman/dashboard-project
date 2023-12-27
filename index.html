@@ -2,86 +2,137 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+  <title>Welcome | Social Media Dashboard</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | [Challenge Name Here]</title>
-
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
 </head>
 <body>
-
-  Social Media Dashboard
-  Total Followers: 23,004
-
-  Dark Mode
-
-  
-
-  @nathanf
-  1987
-  Followers
-  12 Today
-
-  @nathanf
-  1044
-  Followers
-  99 Today
-
-  @realnathanf
-  11k
-  Followers
-  1099 Today
-
-  Nathan F.
-  8239
-  Subscribers
-  144 Today
-
-
-
-  Overview - Today
-
-  Page Views
-  87
-  3%
-
-  Likes
-  52
-  2%
-
-  Likes
-  5462
-  2257%
-
-  Profile Views
-  52k
-  1375%
-
-  Retweets
-  117
-  303%
-
-  Likes
-  507
-  553%
-
-  Likes
-  107
-  19%
-
-  Total Views
-  1407
-  12%
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
+  <header>
+    <h1>Social Media Dashboard</h1>
+    <h2>Total Followers: 23,004</h2>
+    <div class="h3-container">
+      <h3>Dark Mode</h3>
+      <div class="toggle-container">
+        <input type="checkbox" class="toggle" id="toggle">
+        <label for="toggle" class="button"></label>
+      </div>
+    </div>
+  </header>
+  <section>
+    <article class="facebook-container container">
+      <p><img src="assests/icon-facebook.svg" alt="facebook">@nathanff</p>
+      <p>1987</p>
+      <p>Followers</p>
+      <p><img src="assests/icon-up.svg" alt="">12 Today</p>
+    </article>
+    <article class="twiiter-container container">
+      <p><img src="assests/icon-twitter.svg" alt="icon-twitter">@nathanff</p>
+      <p>1044</p>
+      <p>Followers</p>
+      <p><img src="assests/icon-up.svg" alt="">99 Today</p>
+    </article>
+    <article class="instagram-container container">
+      <p><img src="assests/icon-instagram.svg" alt="icon-instagram">@nathanff</p>
+      <p>11k</p>
+      <p>Followers</p>
+      <p><img src="assests/icon-up.svg" alt="">1099 Today</p>
+    </article>
+    <articl class="youtube-container container">
+      <p><img src="assests/icon-youtube.svg" alt="icon-youtube">@nathanff</p>
+      <p>8239</p>
+      <p>Followers</p>
+      <p class="red"><img src="assests/icon-down.svg" alt="">144 Today</p>
+    </articl>
+  </section>
+<!-- Overview section START -->
+  <section class="overview">
+    <h1>Overview - Today</h1>
+    <article class="overview-container">
+      <div>
+        <p>Page Views</p>
+        <p>87</p>
+      </div>
+      <div>
+        <img src="assests/icon-facebook.svg" alt="icon-facebook">
+        <p class="green"><img src="assests/icon-up.svg" alt="">3%</p>
+      </div>
+    </article>
+    <article class="overview-container"">
+      <div>
+        <p>Likes</p>
+        <p>52</p>
+      </div>
+      <div>
+        <img src="assests/icon-facebook.svg" alt="icon-facebook">
+        <p class="red"><img src="assests/icon-down.svg" alt="">2%</p>
+      </div>
+    </article>
+    <article class="overview-container">
+      <div>
+        <p>Likes</p>
+        <p>5462</p>
+      </div>
+      <div>
+        <img src="assests/icon-instagram.svg" alt="icon-instagram">
+        <p class="green"><img src="assests/icon-up.svg" alt="">2257%</p>
+      </div>
+    </article>
+    <article class="overview-container">
+      <div>
+        <p>Profile Views</p>
+        <p>52k</p>
+      </div>
+      <div>
+        <img src="assests/icon-instagram.svg" alt="icon-youtube">
+        <p class="green"><img src="assests/icon-up.svg" alt="">1375%</p>
+      </div>
+    </article>
+    <article class="overview-container">
+      <div>
+        <p>Retweets</p>
+        <p>117</p>
+      </div>
+      <div>
+        <img src="assests/icon-twitter.svg" alt="icon-twitter">
+        <p class="green"><img src="assests/icon-up.svg" alt="">303%</p>
+      </div>
+    </article>
+    <article class="overview-container">
+      <div>
+        <p>Likes</p>
+        <p>507</p>
+      </div>
+      <div>
+        <img src="assests/icon-twitter.svg" alt="icon-youtube">
+        <p class="green"><img src="assests/icon-up.svg" alt="">553%</p>
+      </div>
+    </article>
+    <article class="overview-container">
+      <div>
+        <p>Likes</p>
+        <p>107</p>
+      </div>
+      <div>
+        <img src="assests/icon-youtube.svg" alt="icon-youtube">
+        <p class="red"><img src="assests/icon-down.svg" alt="">19%</p>
+      </div>
+    </article>
+    <article class="overview-container">
+      <div>
+        <p>Total Views</p>
+        <p>1407</p>
+      </div>
+      <div>
+        <img src="assests/icon-youtube.svg" alt="icon-youtube">
+        <p class="red"><img src="assests/icon-down.svg" alt="">12%</p>
+      </div>
+    </article>
+  </section>
+  <footer>
+    <p>Coded by Abdelrahman</p>
+  </footer>
+  <script src="index.js"></script>
 </body>
 </html>
