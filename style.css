@@ -61,6 +61,7 @@ h3{
     display: flex;
     justify-content: space-between;
     align-items: center;
+    border-radius: 200px;
 }
 label{
     background-color: var(--cards-bg);
@@ -69,9 +70,13 @@ label{
     border-radius: 200px;
     cursor: pointer;
     position: relative;
-    transition: all 5ms;
+    transition: all 500ms;
     outline:  none;
 }
+label:checked{
+
+}
+
 label::before{
     content: "";
     background-color: #fff;
@@ -82,15 +87,22 @@ label::before{
     box-shadow: 0 8px 10px rgba(0, 0, 0, 0.3)
 }
 input:checked + .button{
-    background-color: #fff;
+    background: linear-gradient(90deg, #378fe6 0%, #3eda82 100%);
+
+
 }
 input:checked + .button::before{
     transform: translateX(100%);
-    transition: all 5ms;
+    transition: all 500ms;
+}
+input:not(:checked)+ .button::before{
+    transition: all 500ms;
+    
 }
 .toggle{
     display: none;
 }
+
 
 
 /* Card elements layout and coloring */
@@ -101,6 +113,12 @@ input:checked + .button::before{
     background-color: var(--cards-bg);
     margin-bottom:1rem;
     padding: 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+}
+.container:hover{
+    filter: brightness(90%);
+    transition: ease-in-out 2ms;
 }
 .container p:first-child{
     color: var(--font-color);
@@ -111,7 +129,7 @@ input:checked + .button::before{
     gap: 5px;
 }
 .container p:first-child img{
-    width: 15px;
+    width: 20px;
 }
 
 .container p:nth-child(2){
@@ -133,14 +151,14 @@ input:checked + .button::before{
     font-size: 10px;
     color:rgb(34, 189, 34);
 }
-/* .red{
-    color: rgb(195, 26, 26);
-    font-size: 10px;
+.red-1{
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 5px;
-} */
+    font-size: 10px;
+    color:  rgb(195, 26, 26);
+}
 
 /* //Overview Part Start //*/
 
@@ -148,50 +166,122 @@ input:checked + .button::before{
     color: var(--font-color);
 }
 
-/* .overview-container{
-    display: flex;
-    align-items: s;
-    justify-content: space-around;
+.overview-container{
     background-color: var(--cards-bg);
     margin-bottom: 1rem;
-} */
-/* .overview-container div p:nth-child(1){
-    margin-bottom: 1rem;
-}
-.overview-container div p:last-child{
-    margin-top: 1rem;
-}
-.green{
+    padding: 1rem;
     display: flex;
-    justify-content: center;
+    flex-flow: column;
+    gap: 20px;
+    border-radius: 4px;
+    cursor: pointer;
+
+} 
+.overview-container div:first-child p{
+    padding-bottom: 1rem;
+}
+
+.overview-container:hover{
+    filter: brightness(90%);
+    transition: ease-in-out 2ms;
+}
+.left-side{
+    display: flex;
+    justify-content: space-between;
     align-items: center;
-    gap: 5px;
+}
+.right-side{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.icon{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     font-size: 10px;
     color:rgb(34, 189, 34);
-} */.overview {
-  /* Assuming this section has display:flex for the following CSS to work */
+}
+.right-side p:first-child{
+    font-size: 30px;
+}
+.down{
+    color:  rgb(195, 26, 26);
+}
+footer{
+    text-align: center;
+    padding: 1rem;
+    background-color: var(--cards-bg);
+
 }
 
-.overview-container {
-  display: flex;
-  justify-content: space-between; /* Creates space between elements */
+/* Dark Mode setting */
+
+.dark-mode{
+    background-color: var(--dark-bg);
+    transition:ease-in 200ms;
 }
 
-.overview-container > div:first-child,
-.overview-container > div:last-child {
-  flex-basis: calc(50% - 20px); /* Adjust the width for the first and last div */
+.darkmode-container{
+    background-color: var(--cards-bg-dark);
+    transition:ease-in 200ms;
+
 }
 
-.overview-container > div:not(:first-child):not(:last-child) {
-  flex-basis: calc(25% - 10px); /* Adjust the width for the middle divs */
+.dark-fonts-numbers{
+   color: #fff;    
+}
+/* //toggle the heading fonts in darkmode */
+.fonts-dark{
+    color: #fff;
 }
 
-.overview-container div {
-  display: flex;
-  align-items: center;
-  gap: 10px; /* Adjust the gap between elements */
+.footer{
+    background-color: var(--cards-bg-dark);
+    color: #fff;
+
 }
 
-.overview-container div p {
-  margin: 0; /* Reset margin */
+.instagram-container{
+    border-top: 5px solid;
+    border-image: linear-gradient(to right, #833ab4, #dd2a7b, #feda77);
+    border-image-slice: 1;
+}
+.facebook-container,.twitter-container{
+    border-top: 5px solid rgb(56, 147, 252);
+}
+.youtube-container{
+    border-top: 5px solid rgb(238, 57, 57);
+}
+
+@media (min-width:700px){
+    main{
+        min-height: 100vh;
+    }
+  
+   header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-flow: row;
+    
+   }
+   .h3-container{
+    gap: 10px;
+   }
+   .main-container{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 25px;
+   } 
+   .overview{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: auto repeat(2, 1fr);
+    grid-gap: 25px;
+   }
+   h1.numbers {
+    grid-column: 1 / -1; /* Spans from the first to the last column */
+    grid-row: 1 / 2; /* Adjust this to modify the height of the h1 */
+  }
 }
